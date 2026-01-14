@@ -6,7 +6,7 @@
     "target": "ES2022",
     "lib": ["ES2022"],
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDir": ".",
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "strict": true,
@@ -14,6 +14,6 @@
     "types": ["node"],
     "allowImportingTsExtensions": false
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "../../packages/**/*"],
   "exclude": ["node_modules", "dist", "scripts"]
 }

@@ -27,11 +27,8 @@ app.use(cors());
 app.use(express.json());
 
 // Serve static files from the public directory
-// In development: src/../public, in production: dist/public
-const isDev = process.env.NODE_ENV !== 'production';
-const publicPath = isDev 
-  ? path.join(__dirname, '../public')
-  : path.join(__dirname, 'public');
+// In development: dist/public (built), in production: dist/public
+const publicPath = path.join(__dirname, '../dist/public');
   
 console.log('Public path:', publicPath);
 app.use(express.static(publicPath));

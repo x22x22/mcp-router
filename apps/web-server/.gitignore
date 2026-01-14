@@ -5,3 +5,6 @@ dist
 .env
 .env.local
 *.tsbuildinfo
+*.d.ts
+*.d.ts.map
+*.js.map
