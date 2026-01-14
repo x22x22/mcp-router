@@ -43,6 +43,12 @@
 
 Download from our [releases page](https://github.com/mcp-router/mcp-router/releases).
 
+### Server Deployment
+
+MCP Router can also be deployed as a server for team access or cloud deployment. See our [Server Deployment Guide](docs/SERVER_DEPLOYMENT.md) for detailed instructions.
+
+### CLI Connection
+
 After setting up MCP Router, you can connect to MCP Router using the CLI:
 ```bash
 # Set your MCP Router token (Issued when adding a custom app)

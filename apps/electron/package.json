@@ -18,11 +18,6 @@
     "make:x64": "cross-env NODE_ENV=production npm_config_target_arch=x64 npm_config_target_platform=darwin npm_config_arch=x64 electron-forge make --arch=x64",
     "make:arm64": "cross-env NODE_ENV=production npm_config_target_arch=arm64 npm_config_target_platform=darwin npm_config_arch=arm64 electron-forge make --arch=arm64",
     "publish": "npx @electron/rebuild -f -w better-sqlite3 && cross-env NODE_ENV=production electron-forge publish",
-    "build:web": "cross-env NODE_ENV=production webpack --config webpack.web.config.ts",
-    "build:server": "tsc --project tsconfig.server.json",
-    "build:standalone": "pnpm run build:web && pnpm run build:server",
-    "start:server": "node .webpack/server/server.js",
-    "dev:server": "ts-node src/server.ts",
     "lint": "eslint --ext .ts,.tsx .",
     "lint:fix": "eslint --ext .ts,.tsx . --fix",
     "format": "prettier --write .",
@@ -114,6 +109,7 @@
     "ts-loader": "^9.5.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
-    "webpack": "^5.103.0"
+    "webpack": "^5.103.0",
+    "webpack-cli": "^6.0.1"
   }
 }
