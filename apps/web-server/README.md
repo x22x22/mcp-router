@@ -20,6 +20,9 @@ This package provides a web-based deployment mode for MCP Router, allowing you t
 # From the root of the repository
 pnpm install
 
+# Build the web server (required before first run)
+pnpm --filter @mcp_router/web-server build
+
 # Start the development server
 pnpm --filter @mcp_router/web-server dev
 
@@ -36,7 +39,10 @@ The server will start on `http://localhost:3000` by default.
 # Install dependencies (from root)
 pnpm install
 
-# Start the development server
+# Build the project (compiles server + UI)
+pnpm --filter @mcp_router/web-server build
+
+# Start the development server (with hot reload)
 pnpm --filter @mcp_router/web-server dev
 
 # Type check
@@ -48,7 +54,7 @@ The server will start on `http://localhost:3000` by default.
 ### Production Build
 
 ```bash
-# Build the server
+# Build the server and UI
 pnpm --filter @mcp_router/web-server build
 
 # Start the production server
@@ -58,6 +64,11 @@ pnpm --filter @mcp_router/web-server start
 cd apps/web-server
 node dist/server.js
 ```
+
+**Important:** You must run `build` before `start` in production. The build process:
+1. Compiles the TypeScript server code → `dist/server.js`
+2. Bundles the React UI with Webpack → `dist/public/`
+3. Prepares all assets for serving
 
 ### Environment Variables
 

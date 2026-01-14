@@ -57,11 +57,16 @@ cd mcp-router
 # 安装依赖
 pnpm install
 
+# 构建 Web 服务器
+pnpm --filter @mcp_router/web-server build
+
 # 启动 Web 服务器
-pnpm --filter @mcp_router/web-server dev
+pnpm --filter @mcp_router/web-server start
 ```
 
 在浏览器中访问 `http://localhost:3000`
+
+**注意：** 必须先运行 `build` 再运行 `start`。构建过程会编译服务器代码并打包 UI。
 
 详细部署说明请参见 [服务器部署指南](docs/SERVER_DEPLOYMENT.md)。
 

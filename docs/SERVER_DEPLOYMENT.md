@@ -10,20 +10,34 @@ The web server mode provides a browser-accessible interface for MCP Router witho
 
 ### Quick Start
 
-1. **Development Mode**
+1. **Install Dependencies**
+   ```bash
+   pnpm install
+   ```
+
+2. **Build the Server**
+   ```bash
+   pnpm --filter @mcp_router/web-server build
+   ```
+   
+   This step:
+   - Compiles the TypeScript server code
+   - Bundles the React UI with Webpack
+   - Prepares all static assets
+
+3. **Development Mode**
    ```bash
    pnpm --filter @mcp_router/web-server dev
    ```
 
-2. **Production Build**
+4. **Production Mode**
    ```bash
-   pnpm --filter @mcp_router/web-server build
    pnpm --filter @mcp_router/web-server start
    ```
 
-3. **Access the UI**
+5. **Access the UI**
    - Open your browser to `http://localhost:3000`
-   - The server will serve the MCP Router UI
+   - The server will serve the complete MCP Router UI
 
 ### Configuration
 

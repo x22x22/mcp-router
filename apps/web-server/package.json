@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "tsx src/server.ts",
-    "build": "npm run build:ui && node scripts/build.js",
+    "build": "npm run build:server && npm run build:ui && node scripts/build.js",
+    "build:server": "tsc --project tsconfig.server.json",
     "build:ui": "webpack --config webpack.config.cjs",
     "start": "node dist/server.js",
     "typecheck": "tsc --noEmit"

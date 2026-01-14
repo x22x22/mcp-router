@@ -58,11 +58,16 @@ cd mcp-router
 # Install dependencies
 pnpm install
 
+# Build the web server
+pnpm --filter @mcp_router/web-server build
+
 # Start the web server
-pnpm --filter @mcp_router/web-server dev
+pnpm --filter @mcp_router/web-server start
 ```
 
 Access the UI at `http://localhost:3000`
+
+**Note:** You must run `build` before `start`. The build process compiles the server and bundles the UI.
 
 For detailed deployment instructions, see [Server Deployment Guide](docs/SERVER_DEPLOYMENT.md).
 
