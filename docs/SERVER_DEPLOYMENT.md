@@ -2,6 +2,8 @@
 
 MCP Router now supports a server deployment mode, allowing you to deploy it to a server and access the UI through a web browser.
 
+![Web Server UI](https://github.com/user-attachments/assets/162e7ec6-3c3a-4792-b2a7-e67c40fdfa60)
+
 ## 🌐 Web Server
 
 The web server mode provides a browser-accessible interface for MCP Router without requiring the Electron desktop application.
