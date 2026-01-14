@@ -13,14 +13,15 @@
 
 ## 🎯 Overview
 
-**MCP Router** is a desktop application for simplifies the management of Model Context Protocol (MCP) servers.
+**MCP Router** is an application that simplifies the management of Model Context Protocol (MCP) servers. Available as both a desktop application and a web server for browser-based access.
 
 ### ✨ Key Features
 
 - 🌐 **Universal** — Connect to any MCP server
   - Remote or local servers
   - Supports DXT, JSON, Manual
-- 🖥️ **Cross-platform** — Windows and macOS
+- 🖥️ **Cross-platform** — Windows and macOS desktop app, or deploy as a web server
+- 🌍 **Flexible Deployment** — Use as a desktop app or deploy to a server for browser access
 - 🗂 **Context Management** — Keep growing MCP server contexts organized
   - Group MCP servers into Projects
   - Manage modes with Workspaces (like browser profiles)
@@ -41,7 +42,31 @@
 
 ## 📥 Installation
 
+### Desktop Application
+
 Download from our [releases page](https://github.com/mcp-router/mcp-router/releases).
+
+### Web Server Deployment
+
+Deploy MCP Router as a web server for browser-based access:
+
+```bash
+# Clone the repository
+git clone https://github.com/mcp-router/mcp-router.git
+cd mcp-router
+
+# Install dependencies
+pnpm install
+
+# Start the web server
+pnpm --filter @mcp_router/web-server dev
+```
+
+Access the UI at `http://localhost:3000`
+
+For detailed deployment instructions, see [Server Deployment Guide](docs/SERVER_DEPLOYMENT.md).
+
+### CLI Connection
 
 After setting up MCP Router, you can connect to MCP Router using the CLI:
 ```bash

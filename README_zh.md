@@ -13,14 +13,15 @@
 
 ## 🎯 概览
 
-**MCP Router** 是一款用于简化 Model Context Protocol (MCP) 服务器管理的桌面应用。
+**MCP Router** 是一款用于简化 Model Context Protocol (MCP) 服务器管理的应用程序。既可作为桌面应用使用,也可部署为 Web 服务器以便通过浏览器访问。
 
 ### ✨ 核心特性
 
 - 🌐 **通用连接** — 支持接入任意 MCP 服务器
   - 既可连接远程服务器，也支持本地服务器
   - 兼容 DXT、JSON、Manual 等多种协议
-- 🖥️ **跨平台** — 提供 Windows 与 macOS 版本
+- 🖥️ **跨平台** — 提供 Windows 与 macOS 桌面版本,或部署为 Web 服务器
+- 🌍 **灵活部署** — 可作为桌面应用使用,或部署到服务器通过浏览器访问
 - 🗂 **上下文管理** — 有序管理不断增长的 MCP 服务器上下文
   - 以「项目」对 MCP 服务器分组
   - 通过「工作区」管理模式（类似浏览器配置文件）
@@ -40,7 +41,29 @@
 
 ## 📥 安装
 
+### 桌面应用
+
 可在 [GitHub 发布页](https://github.com/mcp-router/mcp-router/releases) 获取最新版本。
+
+### Web 服务器部署
+
+将 MCP Router 部署为 Web 服务器以便通过浏览器访问：
+
+```bash
+# 克隆仓库
+git clone https://github.com/mcp-router/mcp-router.git
+cd mcp-router
+
+# 安装依赖
+pnpm install
+
+# 启动 Web 服务器
+pnpm --filter @mcp_router/web-server dev
+```
+
+在浏览器中访问 `http://localhost:3000`
+
+详细部署说明请参见 [服务器部署指南](docs/SERVER_DEPLOYMENT.md)。
 
 ## 🚀 功能亮点
 
