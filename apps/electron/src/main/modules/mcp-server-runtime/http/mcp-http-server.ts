@@ -424,4 +424,12 @@ export class MCPHttpServer {
       });
     });
   }
+
+  /**
+   * Get the Express application instance
+   * @returns The Express application
+   */
+  public getApp(): express.Application {
+    return this.app;
+  }
 }

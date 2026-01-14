@@ -42,6 +42,23 @@
 
 可在 [GitHub 发布页](https://github.com/mcp-router/mcp-router/releases) 获取最新版本。
 
+### 服务器部署
+
+MCP Router 也可以部署为服务器，用于团队访问或云部署。详细说明请参阅我们的[服务器部署指南](docs/SERVER_DEPLOYMENT_ZH.md)。
+
+### CLI 连接
+
+设置 MCP Router 后，您可以使用 CLI 连接到 MCP Router：
+```bash
+# 设置您的 MCP Router 令牌（在添加自定义应用时颁发）
+export MCPR_TOKEN="mcpr_your_token"
+# 连接到 MCP Router，运行：
+npx -y @mcp_router/cli connect
+
+# 如果要使用项目，运行：
+npx -y @mcp_router/cli connect --project <project-name>
+```
+
 ## 🚀 功能亮点
 
 ### 📊 集中式服务器管理

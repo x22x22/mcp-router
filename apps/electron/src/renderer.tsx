@@ -6,6 +6,9 @@ import App from "@/renderer/components/App";
 import { HashRouter } from "react-router-dom";
 import { TitleBar } from "@/renderer/components/TitleBar";
 
+// Check if running in Electron
+const isElectron = !!(window as any).electronAPI;
+
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
 );
@@ -13,9 +16,9 @@ root.render(
   <React.StrictMode>
     <HashRouter>
       <div className="h-screen flex flex-col">
-        <TitleBar />
+        {isElectron && <TitleBar />}
         <div className="flex-1 overflow-hidden">
-          <div className="h-2" />
+          {isElectron && <div className="h-2" />}
           <App />
         </div>
       </div>
