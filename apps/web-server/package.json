@@ -1,0 +1,42 @@
+{
+  "name": "@mcp_router/web-server",
+  "version": "0.6.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "build": "npm run build:server && npm run build:ui && node scripts/build.js",
+    "build:server": "tsc --project tsconfig.server.json",
+    "build:ui": "webpack --config webpack.config.cjs",
+    "start": "node dist/server.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "cors": "^2.8.5",
+    "express-rate-limit": "^7.5.0",
+    "@mcp_router/shared": "workspace:*",
+    "@mcp_router/ui": "workspace:*",
+    "@mcp_router/tailwind-config": "workspace:*",
+    "@mcp_router/remote-api-types": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.19.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.3",
+    "webpack": "^5.103.0",
+    "webpack-cli": "^5.1.4",
+    "ts-loader": "^9.5.4",
+    "html-webpack-plugin": "^5.6.5",
+    "style-loader": "^3.3.4",
+    "css-loader": "^6.11.0",
+    "postcss-loader": "^8.2.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18",
+    "autoprefixer": "^10.4.22",
+    "@types/webpack": "^5.28.5",
+    "ts-node": "^10.9.2"
+  }
+}
